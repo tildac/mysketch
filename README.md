@@ -1,2 +1,6 @@
+### Deadstock 
+
+![Mathilda Christensson](images/ScreenShot.png?raw=true "Mathilda Christensson") 
+
 This sketch represents the issues of "deadstock" within the fashion industry. Currently, fast fashion dominates fashion production and has led supply chains to become complex, pollutive, and wasteful. Running diagonally across the sketch is an image taken from the non-profit organization Fashion Revolution. The burning t-shirt represents the clothing that is increasingly being burnt to avoid reaching secondhand markets or due to the limited space in landfills. On either side of this "deadstock" of t-shirts are names of fashion brands. On the lower left side sustainable brands Reformation, Everlane, and People Tree are represented. In opposition, diagonally opposite are the key fast fashion brands that significantly contribute to environmental degradation in their fast turnovers of trend and mass production systems. These include: H&M, Topshop, Mango, and ZARA. With my mouse, I have created a green circle, upon pressing, the user is able to trigger a recycling symbol. This image is meant to symbolize the regeneration essential to the structure of the fashion industry - namely, the necessity of creating a circular model to replace the destructive nature of the current linear one. 
 
