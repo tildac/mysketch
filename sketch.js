@@ -17,7 +17,7 @@ function preload()
     img4 = loadImage("images/ppltree.png");
 
     img5 = loadImage("images/topshop-logo.png");
-    img6 = loadImage("images/zara-logo.png");
+    img6 = loadImage("images/Zara-logo.png");
     img7 = loadImage("images/hm-logo.png");
     img8 = loadImage("images/mango-logo.png");
 
