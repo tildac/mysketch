@@ -1,16 +1,13 @@
 
-
-var originalImage, thresholdImage, invertImage;
-let Imagesize = 3;
+let Imagesize = 4;
 let img;
 
+var x = 100.0;
+var y = 100;
+var speed = 2.5;
 
 function preload() 
 {
-    originalImage = loadImage("images/Img1Code.png");
-    thresholdImage = loadImage("images/Img1Code.png");
-    grayImage = loadImage("images/Img1Code.png"); 
-    
     img = loadImage("images/recycling.png");
     img2 = loadImage("images/everlane1.png");
     img3 = loadImage("images/reformation.png");
@@ -19,76 +16,58 @@ function preload()
     img5 = loadImage("images/topshop-logo.png");
     img6 = loadImage("images/Zara-logo.png");
     img7 = loadImage("images/hm-logo.png");
-    img8 = loadImage("images/mango-logo.png");
+    img8 = loadImage("images/backing1.png");
 
 }
 
 function setup() {
     createCanvas(800, 800);
-    stroke(255);
-
-    var radius = min(width, height) / 2;
-    secondsRadius = radius * 0.71;
-    minutesRadius = radius * 0.60;
-    hoursRadius = radius * 0.50;
-    clockDiameter = radius * 1.7;
-  
-    cx = width / 2;
-    cy = height / 2;
+    image(img8, 0, 0);
 }
 
 function draw() {
-    background(188, 58, 58);
+        fill("white");
+        textSize(40);
+        text("good design endures", 400, 60)
 
-    /*fill('black');
-    triangle(30, 75, 58, 20, 86, 75);*/
+    
+        fill('green');
+        ellipse(mouseX, mouseY, 20, 20);
+        if(mouseIsPressed){
+            image(img, mouseX, mouseY, 100, 100);
+    }
+    
+    
+    {
+        x += speed;
+                
+        if(x > width){
+            x = 0;
+        }
+        fill("white");{
+        ellipse(x, y, 50, 50);}
+        } 
 
-    thresholdImage.filter("threshold", 0.5);
-    grayImage.filter("gray"); 
+    {       
+        y += speed;
+        
+        if(y > width){
+            y = 0;
+        }
+        fill("58, 188, 77");{
+        ellipse(x, y, 50, 50);}
+    } 
 
-    image(originalImage, 200, 200, 400/Imagesize, 400/Imagesize);
-    image(thresholdImage, 400, 400, 400/Imagesize, 400/Imagesize);
-    image(grayImage, 600, 600, 400/Imagesize, 400/Imagesize);
+    for (var i=0; i < 80; i++){
+        triangle(10+i*10, 800, 0, 0);
+     }
 
-    image(originalImage, 100, 100, 400/Imagesize, 400/Imagesize);
-    image(thresholdImage, 300, 300, 400/Imagesize, 400/Imagesize);
-    image(grayImage, 500, 500, 400/Imagesize, 400/Imagesize);
+    image(img2, 550, 400, img2.width/20, img2.height/20);
+    image(img3, 560, 410, img3.width/8, img3.height/8);
+    image(img4, 560, 300, img3.width/8, img3.height/8);
 
-   
-    image(img2, 90, 600, img2.width/20, img2.height/20);
-    image(img3, 90, 450, img3.width/8, img3.height/8);
-    image(img4, 80, 350, img3.width/8, img3.height/8);
-
-    image(img5, 550, 100, img5.width/26, img5.height/26);
-    image(img6, 560, 160, img6.width/20, img6.height/20);
-    image(img7, 560, 242, img7.width/8, img7.height/8);
-    image(img8, 590, 300, img8.width/8, img8.height/8);
-
-
-    fill(255);
-    noStroke();
-
-
-    fill('green');
-    ellipse(mouseX, mouseY, 20, 20);
-    if(mouseIsPressed){
-        image(img, mouseX, mouseY, 100, 100);
+    image(img5, 80, 400, img5.width/26, img5.height/26);
+    image(img6, 90, 280, img6.width/20, img6.height/20);
+    image(img7, 90, 335, img7.width/8, img7.height/8);
 
     }
-
-
-    fill(255);
-    textSize(40);
-    text("Deadstock", 50, 80)
-
-    fill(255);
-    textSize(20);
-    text("good design endures", 40, 750)
-
-    fill(255);
-    textSize(20);
-    text("good design is not to be wasted", 460, 50)
-
-}
-
-
